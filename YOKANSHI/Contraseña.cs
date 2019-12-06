@@ -13,6 +13,7 @@ namespace YOKANSHI
 	public partial class Contraseña : Form
 	{
 		public int action;
+		public string contranue{ get; set; }
 		public Contraseña()
 		{
 			InitializeComponent();
@@ -33,23 +34,35 @@ namespace YOKANSHI
 			if (txtpassn.Text=="" || txtpassn.Text == " ")
 			{
 				MessageBox.Show("Coloque una contraseña");
-				return;
+				
 			}
 			if (txtpassnv.Text == "" || txtpassnv.Text == " ")
 			{
 				MessageBox.Show("Ingrese la validacion");
-				return;
+				
 			}
 			if (txtpassn.Text != txtpassnv.Text )
 			{
 				MessageBox.Show("Las contraseñas no coinciden");
-				return;
+				
 			}
 			else 
 			{
-				usuarios par = new usuarios();
-				par.pass = txtpassn.Text;
-				this.Close();
+				contranue = txtpassn.Text;
+				return;
+			}
+		}
+
+		private void txtpassnv_TextChanged(object sender, EventArgs e)
+		{
+			if (txtpassn.Text == txtpassnv.Text && txtpassn.Text!="" && txtpassn.Text != " " && txtpassnv.Text != "" && txtpassnv.Text != " ")
+			{
+				button1.Enabled = true;
+
+			}
+			else {
+				lblerror.Visible = true;
+				button1.Enabled = false;
 			}
 		}
 	}

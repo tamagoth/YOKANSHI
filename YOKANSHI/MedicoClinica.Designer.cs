@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.label1 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.cmbMed = new System.Windows.Forms.ComboBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
@@ -45,13 +45,13 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Medico";
 			// 
-			// comboBox1
+			// cmbMed
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(51, 12);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(121, 21);
-			this.comboBox1.TabIndex = 1;
+			this.cmbMed.FormattingEnabled = true;
+			this.cmbMed.Location = new System.Drawing.Point(51, 12);
+			this.cmbMed.Name = "cmbMed";
+			this.cmbMed.Size = new System.Drawing.Size(121, 21);
+			this.cmbMed.TabIndex = 1;
 			// 
 			// dataGridView1
 			// 
@@ -88,12 +88,13 @@
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.dataGridView1);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.cmbMed);
 			this.Controls.Add(this.label1);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "MedicoClinica";
 			this.Text = "MedicoClinica";
+			this.Load += new System.EventHandler(this.MedicoClinica_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -103,7 +104,7 @@
 		#endregion
 
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cmbMed;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;

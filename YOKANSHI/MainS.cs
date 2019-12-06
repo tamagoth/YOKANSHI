@@ -12,21 +12,36 @@ namespace YOKANSHI
 {
 	public partial class MainS : Form
 	{
-		public MainS()
-		{
+		int id=-1;
+		int isAdm=0;
+		int isDoc = 0;
+		mari maria = new mari();
+		public MainS(int idl,int adml,int docl)
+		{			
 			InitializeComponent();
+			id = idl;
+			isAdm = adml;
+			isDoc = docl;
 		}
 
 		private void cmdUsu_Click(object sender, EventArgs e)
 		{
-			usuarios usu = new usuarios();
+			int t = 0;
+			if (isAdm == 1)
+			{
+				t = -1;
+			}
+			else {
+				t = id;
+			}
+			usuarios usu = new usuarios(t,isAdm);
 			usu.MdiParent = this;
 			usu.Show();
 		}
 
 		private void MainS_Load(object sender, EventArgs e)
 		{
-
+			label1.Text = maria.getName(id);			
 		}
 
 		private void cmdClinicas_Click(object sender, EventArgs e)

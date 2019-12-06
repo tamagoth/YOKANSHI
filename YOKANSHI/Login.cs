@@ -13,6 +13,11 @@ namespace YOKANSHI
 {
 	public partial class Login : Form
 	{
+
+
+		int id = 0;
+		int isDoc = 0;
+		int isAdm = 0;
 		public Login()
 		{
 			InitializeComponent();
@@ -46,8 +51,11 @@ namespace YOKANSHI
 			}
 			else {
 				txtId.Text = "";
+
+				isAdm = maria.isAdm(id);
+				isDoc = maria.isMed(id);
 				txtPass.Text = "";
-				MainS principal = new MainS();
+				MainS principal = new MainS(id, isAdm,isDoc);
 				this.Hide();
 				principal.ShowDialog();
 				this.Close();

@@ -36,6 +36,7 @@
 			this.txtpass = new System.Windows.Forms.TextBox();
 			this.txtpassn = new System.Windows.Forms.TextBox();
 			this.txtpassnv = new System.Windows.Forms.TextBox();
+			this.lblerror = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -51,7 +52,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(10, 50);
+			this.label2.Location = new System.Drawing.Point(12, 40);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(96, 13);
 			this.label2.TabIndex = 1;
@@ -60,7 +61,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(55, 76);
+			this.label3.Location = new System.Drawing.Point(57, 66);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(51, 13);
 			this.label3.TabIndex = 2;
@@ -68,6 +69,8 @@
 			// 
 			// button1
 			// 
+			this.button1.DialogResult = System.Windows.Forms.DialogResult.Yes;
+			this.button1.Enabled = false;
 			this.button1.Location = new System.Drawing.Point(12, 105);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
@@ -97,7 +100,7 @@
 			// 
 			// txtpassn
 			// 
-			this.txtpassn.Location = new System.Drawing.Point(112, 47);
+			this.txtpassn.Location = new System.Drawing.Point(114, 37);
 			this.txtpassn.Name = "txtpassn";
 			this.txtpassn.PasswordChar = '*';
 			this.txtpassn.Size = new System.Drawing.Size(158, 20);
@@ -105,17 +108,30 @@
 			// 
 			// txtpassnv
 			// 
-			this.txtpassnv.Location = new System.Drawing.Point(112, 73);
+			this.txtpassnv.Location = new System.Drawing.Point(114, 63);
 			this.txtpassnv.Name = "txtpassnv";
 			this.txtpassnv.PasswordChar = '*';
 			this.txtpassnv.Size = new System.Drawing.Size(158, 20);
 			this.txtpassnv.TabIndex = 7;
+			this.txtpassnv.TextChanged += new System.EventHandler(this.txtpassnv_TextChanged);
+			// 
+			// lblerror
+			// 
+			this.lblerror.AutoSize = true;
+			this.lblerror.ForeColor = System.Drawing.Color.DarkRed;
+			this.lblerror.Location = new System.Drawing.Point(109, 89);
+			this.lblerror.Name = "lblerror";
+			this.lblerror.Size = new System.Drawing.Size(149, 13);
+			this.lblerror.TabIndex = 8;
+			this.lblerror.Text = "Las contraseñas no coinciden";
+			this.lblerror.Visible = false;
 			// 
 			// Contraseña
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(282, 140);
+			this.Controls.Add(this.lblerror);
 			this.Controls.Add(this.txtpassnv);
 			this.Controls.Add(this.txtpassn);
 			this.Controls.Add(this.txtpass);
@@ -144,5 +160,6 @@
 		private System.Windows.Forms.TextBox txtpass;
 		private System.Windows.Forms.TextBox txtpassn;
 		private System.Windows.Forms.TextBox txtpassnv;
+		private System.Windows.Forms.Label lblerror;
 	}
 }

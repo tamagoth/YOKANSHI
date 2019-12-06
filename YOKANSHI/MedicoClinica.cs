@@ -21,5 +21,13 @@ namespace YOKANSHI
 		{
 
 		}
+
+		private void MedicoClinica_Load(object sender, EventArgs e)
+		{
+			mari maria = new mari();
+			List<String> Medicos = new List<String>();
+			Medicos = maria.getMedicos();
+			cmbMed.DataSource = Medicos;
+		}
 	}
 }

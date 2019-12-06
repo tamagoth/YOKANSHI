@@ -163,5 +163,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\buscar.png" />
+    <Content Include="Assets\enfocar.png" />
+    <Content Include="Assets\espalda.png" />
+    <Content Include="Assets\flecha%281%29.png" />
+    <Content Include="Assets\flecha%282%29.png" />
+    <Content Include="Assets\flecha.png" />
+    <Content Include="Assets\papel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

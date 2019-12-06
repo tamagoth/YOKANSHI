@@ -34,12 +34,13 @@
 			this.cmdCitas = new System.Windows.Forms.Button();
 			this.cmdPacientes = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			this.flowLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// cmdUsu
 			// 
-			this.cmdUsu.Location = new System.Drawing.Point(3, 3);
+			this.cmdUsu.Location = new System.Drawing.Point(3, 132);
 			this.cmdUsu.Name = "cmdUsu";
 			this.cmdUsu.Size = new System.Drawing.Size(87, 23);
 			this.cmdUsu.TabIndex = 0;
@@ -49,7 +50,7 @@
 			// 
 			// cmdClinicas
 			// 
-			this.cmdClinicas.Location = new System.Drawing.Point(3, 32);
+			this.cmdClinicas.Location = new System.Drawing.Point(3, 103);
 			this.cmdClinicas.Name = "cmdClinicas";
 			this.cmdClinicas.Size = new System.Drawing.Size(87, 23);
 			this.cmdClinicas.TabIndex = 1;
@@ -60,11 +61,12 @@
 			// flowLayoutPanel1
 			// 
 			this.flowLayoutPanel1.AutoSize = true;
-			this.flowLayoutPanel1.Controls.Add(this.cmdUsu);
-			this.flowLayoutPanel1.Controls.Add(this.cmdClinicas);
-			this.flowLayoutPanel1.Controls.Add(this.cmdCitas);
-			this.flowLayoutPanel1.Controls.Add(this.cmdPacientes);
+			this.flowLayoutPanel1.Controls.Add(this.label1);
 			this.flowLayoutPanel1.Controls.Add(this.button1);
+			this.flowLayoutPanel1.Controls.Add(this.cmdPacientes);
+			this.flowLayoutPanel1.Controls.Add(this.cmdCitas);
+			this.flowLayoutPanel1.Controls.Add(this.cmdClinicas);
+			this.flowLayoutPanel1.Controls.Add(this.cmdUsu);
 			this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -75,7 +77,7 @@
 			// 
 			// cmdCitas
 			// 
-			this.cmdCitas.Location = new System.Drawing.Point(3, 61);
+			this.cmdCitas.Location = new System.Drawing.Point(3, 74);
 			this.cmdCitas.Name = "cmdCitas";
 			this.cmdCitas.Size = new System.Drawing.Size(87, 23);
 			this.cmdCitas.TabIndex = 2;
@@ -85,7 +87,7 @@
 			// 
 			// cmdPacientes
 			// 
-			this.cmdPacientes.Location = new System.Drawing.Point(3, 90);
+			this.cmdPacientes.Location = new System.Drawing.Point(3, 45);
 			this.cmdPacientes.Name = "cmdPacientes";
 			this.cmdPacientes.Size = new System.Drawing.Size(87, 23);
 			this.cmdPacientes.TabIndex = 3;
@@ -95,13 +97,22 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(3, 119);
+			this.button1.Location = new System.Drawing.Point(3, 16);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(87, 23);
 			this.button1.TabIndex = 4;
 			this.button1.Text = "Medicamento";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click_1);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(3, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(35, 13);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "label1";
 			// 
 			// MainS
 			// 
@@ -115,6 +126,7 @@
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.MainS_Load);
 			this.flowLayoutPanel1.ResumeLayout(false);
+			this.flowLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -128,5 +140,6 @@
 		private System.Windows.Forms.Button cmdCitas;
 		private System.Windows.Forms.Button cmdPacientes;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label1;
 	}
 }
