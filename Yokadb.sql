@@ -169,18 +169,22 @@ CREATE TABLE IF NOT EXISTS `tusu` (
   `Doctor` int(11) DEFAULT NULL,
   `Cedula` varchar(20) COLLATE latin1_spanish_ci DEFAULT NULL,
   `Email` varchar(60) COLLATE latin1_spanish_ci DEFAULT NULL,
-  `Admin` varchar(100) COLLATE latin1_spanish_ci DEFAULT NULL,
+  `Admin` int(11) NOT NULL DEFAULT 0,
   `Pass` varchar(255) COLLATE latin1_spanish_ci NOT NULL,
   `Valid` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='Usuarios';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci COMMENT='Usuarios';
 
 -- Volcando datos para la tabla yokadb.tusu: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `tusu` DISABLE KEYS */;
 INSERT INTO `tusu` (`ID`, `UserID`, `Nombre`, `Apellidos`, `Doctor`, `Cedula`, `Email`, `Admin`, `Pass`, `Valid`) VALUES
-	(1, 'Admin', NULL, NULL, 0, NULL, NULL, '1', '21232f297a57a5a743894a0e4a801fc3', 1);
+	(1, 'Admin', 'Admin', '', 0, '', '', 1, '21232f297a57a5a743894a0e4a801fc3', 1),
+	(2, 'amendias', 'Agustin', 'Ayala', 0, '', 'agustin_layton@hotmail.com', 0, 'F869CE1C8414A264BB11E14A2C8850ED', 1),
+	(3, 'cmeow', 'Clarita', 'Meow', 0, '', 'gato@hotmeow.com', 1, 'F869CE1C8414A264BB11E14A2C8850ED', 1),
+	(4, 'mavalos', 'Maria del Rosario', 'Avalos', 0, '', 'm.rosario.avalos@outlook.com', 0, '739194B439A0F5C53CB457564049501F', 1);
 /*!40000 ALTER TABLE `tusu` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
