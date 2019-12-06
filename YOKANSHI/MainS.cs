@@ -60,7 +60,7 @@ namespace YOKANSHI
 
 		private void cmdPacientes_Click(object sender, EventArgs e)
 		{
-			Pacientes paci = new Pacientes();
+			Pacientes paci = new Pacientes(-1);
 			paci.MdiParent = this;
 			paci.Show();
 		}
